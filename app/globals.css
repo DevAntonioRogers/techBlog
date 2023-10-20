@@ -2,26 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@layer styles {
+  .wrapper {
+    @apply w-[90%] m-auto max-w-[1400px];
   }
-}
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  .mobile-menu {
+    @apply absolute top-16 px-10 right-5 rounded-md flex justify-center items-center flex-col z-10 bg-sky-400 dark:bg-dark  text-white gap-5 py-5;
+  }
+
+  .themeToggle {
+    @apply relative w-16 h-8 flex items-center bg-white dark:bg-gray-900 cursor-pointer rounded-full p-1;
+  }
+
+  .ball {
+    @apply absolute bg-white dark:bg-medium w-6 h-6 rounded-full shadow-md transform transition-transform duration-300;
+  }
+
+  .newsletter {
+    @apply text-center lg:text-left lg:flex lg:gap-20  xl:gap-36 items-center;
+  }
+
+  .newsletter-form {
+    @apply flex flex-wrap sm:flex-nowrap gap-y-4 gap-x-2 sm:gap-x-0 bg-transparent sm:bg-gray-200 sm:dark:bg-white sm:rounded-full lg:min-w-[450px] max-w-[500px] mx-auto;
+  }
+
+  .newsletter-input {
+    @apply w-full h-16 border-none flex-grow rounded-full sm:bg-transparent bg-gray-300 dark:bg-white/10 sm:dark:bg-transparent focus:outline-none;
+  }
 }
