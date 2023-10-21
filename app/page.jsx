@@ -1,5 +1,11 @@
+import Hero from "@/components/Hero";
+
 const Home = () => {
-  return <div className="text-3xl">page</div>;
+  return (
+    <>
+      <Hero />
+    </>
+  );
 };
 
 export default Home;

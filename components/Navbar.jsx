@@ -2,10 +2,10 @@
 import Link from "next/link";
 import MobileMenu from "./MobileMenu";
 import ThemeToggle from "./ThemeToggle";
-import clsx from "clsx";
 import { Links } from "@/constants/links";
 import { IoMdPulse } from "react-icons/io";
-
+import useMenuActive from "@/hooks/useMenuActive";
+import LinkItem from "./LinkItem";
 const Navbar = () => {
   return (
     <nav className="w-full py-5 dark:bg-dark">
@@ -23,9 +23,17 @@ const Navbar = () => {
         </Link>
 
         <div className="flex gap-8 max-lg:gap-5 items-center flex-1 max-md:hidden text-gray-600 dark:text-white justify-center">
-          {Links.map((link, index) => (
-            <Link href={link.route}>{link.label}</Link>
-          ))}
+          {Links.map((link, index) => {
+            const isActive = useMenuActive(link.route);
+            return (
+              <LinkItem
+                key={index}
+                route={link.route}
+                label={link.label}
+                isActive={isActive}
+              />
+            );
+          })}
         </div>
         <div className="flex-1 justify-end flex gap-3 items-center">
           <ThemeToggle />
