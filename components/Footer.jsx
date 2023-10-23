@@ -1,7 +1,7 @@
 "use client";
-import useMenuActive from "@/hooks/useMenuActive";
+import useMenuActive from "../hooks/useMenuActive";
 import LinkItem from "./LinkItem";
-import { Links } from "@/constants/links";
+import { Links } from "../constants/links";
 const Footer = () => {
   return (
     <footer className="footer footer-center p-10 bg-base-200 text-base-content rounded dark:bg-dark dark:text-white border-t dark:border-none">

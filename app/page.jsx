@@ -1,5 +1,5 @@
-import Hero from "@/components/Hero";
-import LatestPost from "@/components/LatestPost";
+import Hero from "../components/Hero";
+import LatestPost from "../components/LatestPost";
 
 const Home = () => {
   return (

@@ -1,4 +1,4 @@
-import { posts } from "@/constants/posts";
+import { posts } from "../constants/posts";
 import PostsCard from "./PostsCard";
 
 const LatestPost = () => {

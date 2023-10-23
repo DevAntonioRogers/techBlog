@@ -2,9 +2,9 @@
 import Link from "next/link";
 import MobileMenu from "./MobileMenu";
 import ThemeToggle from "./ThemeToggle";
-import { Links } from "@/constants/links";
+import { Links } from "../constants/links";
 import { IoMdPulse } from "react-icons/io";
-import useMenuActive from "@/hooks/useMenuActive";
+import useMenuActive from "../hooks/useMenuActive";
 import LinkItem from "./LinkItem";
 const Navbar = () => {
   return (
