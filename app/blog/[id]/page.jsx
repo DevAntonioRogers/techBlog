@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-const page = ({ searchParams }) => {
+const page = ({ params, searchParams }) => {
   const post = searchParams;
   return (
     <div className="py-10 bg-cover">

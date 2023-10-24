@@ -27,7 +27,7 @@ const Posts = () => {
           {filtered
             .slice(0, visiblePosts)
             .map((post, index) => (
-              <PostsCard />
+              <PostsCard post={post} />
             ))}
         </div>
         <div className="py-10">
